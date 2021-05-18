@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            ElevatedButton(
+            ElevatedButton( 
                 child: Text("Sign Up"),
                 onPressed: () async {
                   SignInSignUpResult result = await AuthServices.signUp(
