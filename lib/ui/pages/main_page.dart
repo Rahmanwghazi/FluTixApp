@@ -9,14 +9,25 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Main Page"),),
+      appBar: AppBar(
+        title: Text("Main Page"),
+      ),
       body: Center(
-          child: ElevatedButton(
-        child: Text("Sign Out"),
-        onPressed: () {
-          AuthServices.signOut();
-        },
-      )),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            BlocBuilder<UserBloc, UserState>(
+                builder: (_, userState) => (userState is UserLoaded)
+                    ? Text(userState.user.name)
+                    : SizedBox()),
+            ElevatedButton(
+                child: Text("Sign Out"),
+                onPressed: () {
+                  AuthServices.signOut();
+                }),
+          ],
+        ),
+      ),
     );
   }
 }

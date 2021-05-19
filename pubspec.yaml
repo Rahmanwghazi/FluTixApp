@@ -23,13 +23,13 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  cupertino_icons: ^1.0.2
-  firebase_auth: ^0.15.5+3
   cloud_firestore: ^0.13.4+2
+  cupertino_icons: ^1.0.2
   equatable: ^1.1.1
+  firebase_auth: ^0.15.5+3
+  flutter_bloc: ^3.2.0 
   provider: ^4.0.4
-  flutter_bloc: ^3.2.0
-  
+  google_fonts: ^0.3.10
 
 dev_dependencies:
   flutter_test:

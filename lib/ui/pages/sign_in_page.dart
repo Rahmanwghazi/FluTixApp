@@ -9,14 +9,15 @@ class _SignInPageState extends State<SignInPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text("Sign In Page"),
+      ),
       body: Center(
         child: ElevatedButton(
-          child: Text("Sign In"),
-          onPressed: (){
-            AuthServices.signIn("user@gmail.com", "123456");
-          },
-        )
-
+            child: Text("Sign In"),
+            onPressed: () {
+              AuthServices.signIn("rahmanwghazi@gmail.com", "123456");
+            }),
       ),
     );
   }

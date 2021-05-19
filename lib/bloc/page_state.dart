@@ -2,7 +2,6 @@ part of 'page_bloc.dart';
 
 abstract class PageState extends Equatable {
   const PageState();
-  
 }
 
 class OnInitialPage extends PageState {
@@ -15,7 +14,7 @@ class OnLoginPage extends PageState {
   List<Object> get props => [];
 }
 
-class OnSpLashPage extends PageState {
+class OnSplashPage extends PageState {
   @override
   List<Object> get props => [];
 }
