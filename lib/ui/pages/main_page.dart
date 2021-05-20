@@ -37,6 +37,7 @@ class _MainPageState extends State<MainPage> {
             });
           },
           children: [
+            MoviePage(),
             Center(
               child: Text("New Movie"),
             ),
@@ -104,7 +105,10 @@ class _MainPageState extends State<MainPage> {
                 width: 46,
                 margin: EdgeInsets.only(bottom: 42),
                 child: FloatingActionButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    context.bloc<UserBloc>().add(SignOut());
+                    AuthServices.signOut();
+                  },
                   elevation: 0,
                   backgroundColor: accentColor2,
                   child: SizedBox(
