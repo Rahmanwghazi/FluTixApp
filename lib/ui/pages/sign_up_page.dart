@@ -154,7 +154,7 @@ class SignUpPageState extends State<SignUpPage> {
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10),
                           ),
-                          labelText: "Confirm Passowrd",
+                          labelText: "Confirm Password",
                           hintText: "Confirm Password")),
                   SizedBox(
                     height: 30,
@@ -179,22 +179,29 @@ class SignUpPageState extends State<SignUpPage> {
                           message: "Mismatch password and confirm password",
                         )..show(context);
                       } else if (passwordController.text.length < 6) {
-                        Flushbar(duration: Duration(milliseconds: 1500),
+                        Flushbar(
+                          duration: Duration(milliseconds: 1500),
                           flushbarPosition: FlushbarPosition.TOP,
                           backgroundColor: Color(0xFFFF5C83),
                           message: "Password's length min 6 characters",
                         )..show(context);
-                      }else if (!EmailValidator.validate(
-                        emailController.text
-                      )){ Flushbar(duration: Duration(milliseconds: 1500),
+                      } else if (!EmailValidator.validate(
+                          emailController.text)) {
+                        Flushbar(
+                          duration: Duration(milliseconds: 1500),
                           flushbarPosition: FlushbarPosition.TOP,
                           backgroundColor: Color(0xFFFF5C83),
                           message: "Wrong formatted email address",
                         )..show(context);
-                      }else{
+                      } else {
                         widget.registrationData.name = nameController.text;
                         widget.registrationData.email = emailController.text;
-                        widget.registrationData.password = passwordController.text;
+                        widget.registrationData.password =
+                            passwordController.text;
+
+                        context
+                            .bloc<PageBloc>()
+                            .add(GoToPreferencePage(widget.registrationData));
                       }
                     },
                     child: Icon(Icons.arrow_forward),
