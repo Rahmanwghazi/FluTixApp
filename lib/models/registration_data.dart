@@ -1,6 +1,6 @@
 part of 'models.dart';
 
-class RegistrationData{
+class RegistrationData {
   String name;
   String email;
   String password;
@@ -8,9 +8,11 @@ class RegistrationData{
   String selectedLanguage;
   File profilePicture;
 
-  RegistrationData({
-    this.name = "",
-    this.email = "",
-    this.password = "", this.selectedGenres = const [], this.selectedLanguage = "",this.profilePicture
-  });
+  RegistrationData(
+      {this.name = "",
+      this.email = "",
+      this.password = "",
+      this.selectedGenres = const [],
+      this.selectedLanguage = "",
+      this.profilePicture});
 }
