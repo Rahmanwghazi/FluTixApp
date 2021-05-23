@@ -9,36 +9,44 @@ class MovieCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: 140,
+      width: 210,
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(15),
+          image: DecorationImage(
+              image: (movie.backdropPath == null)
+                  ? AssetImage("assets/ic_movies_grey.png")
+                  : NetworkImage(imageBaseURL + "w780" + movie.backdropPath),
+              fit: BoxFit.cover)),
+      child: Container(
         height: 140,
         width: 210,
+        padding: EdgeInsets.all(16),
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(15),
-            image: DecorationImage(
-                image: (movie.backdropPath == null ) ? AssetImage("assets/ic_movies_grey.png") : 
-                NetworkImage(imageBaseURL + "w700" + movie.backdropPath),
-                fit: BoxFit.cover)),
-        child: Container(
-          height: 140,
-          width: 210,
-          padding: EdgeInsets.all(16),
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(15),
-              gradient: LinearGradient(
-                  begin: Alignment.bottomCenter,
-                  end: Alignment.topCenter,
-                  colors: [
-                    Colors.black.withOpacity(0.61),
-                    Colors.black.withOpacity(0)
-                  ])),
-          child: Column(children: [
+            gradient: LinearGradient(
+                begin: Alignment.bottomCenter,
+                end: Alignment.topCenter,
+                colors: [
+                  Colors.black.withOpacity(0.61),
+                  Colors.black.withOpacity(0)
+                ])),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
             Text(
               movie.title,
               style: whiteTextFont,
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
             ),
-            RatingStars(voteAverage: movie.voteAverage,)
-          ]),
-        ));
+            RatingStars(
+              voteAverage: movie.voteAverage,
+            )
+          ],
+        ),
+      ),
+    );
   }
 }

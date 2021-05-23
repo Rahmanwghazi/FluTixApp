@@ -21,8 +21,8 @@ class Movie extends Equatable {
       title: json['title'],
       voteAverage: (json['vote_average']as num).toDouble(),
       overView: json['overView'],
-      posterPath: json['poster_ath'],
-      backdropPath: json['backdrop_ath']);
+      posterPath: json['poster_path'],
+      backdropPath: json['backdrop_path']);
 
   @override
   List<Object> get props =>
