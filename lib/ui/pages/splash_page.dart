@@ -45,7 +45,7 @@ class SplashPage extends StatelessWidget {
                     onPressed: () {
                       context
                           .bloc<PageBloc>()
-                          .add(GoToRegistraionPage(RegistrationData()));
+                          .add(GoToRegistrationPage(RegistrationData()));
                     }),
               ),
               Row(

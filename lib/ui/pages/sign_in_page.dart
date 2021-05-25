@@ -156,7 +156,7 @@ class _SignInPageState extends State<SignInPage> {
                         onTap: () {
                           context
                               .bloc<PageBloc>()
-                              .add(GoToRegistraionPage(RegistrationData()));
+                              .add(GoToRegistrationPage(RegistrationData()));
                         },
                         child: Text(
                           "Sign Up",

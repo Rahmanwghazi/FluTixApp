@@ -5,15 +5,14 @@ abstract class MovieState extends Equatable {
 }
 
 class MovieInitial extends MovieState {
-    @override
-    List<Object> get props => [];
+  @override
+  List<Object> get props => [];
 }
 
-class MovieLoaded extends MovieState{
+class MovieLoaded extends MovieState {
   final List<Movie> movies;
   MovieLoaded({this.movies});
 
-  @override 
-  List<Object>get props => [movies];
-
+  @override
+  List<Object> get props => [movies];
 }

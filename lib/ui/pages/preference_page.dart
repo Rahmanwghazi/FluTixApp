@@ -22,7 +22,7 @@ class _PreferencePageState extends State<PreferencePage> {
         widget.registrationData.password = "";
         context
             .bloc<PageBloc>()
-            .add(GoToRegistraionPage(widget.registrationData));
+            .add(GoToRegistrationPage(widget.registrationData));
         return;
       },
       child: Scaffold(
@@ -41,7 +41,7 @@ class _PreferencePageState extends State<PreferencePage> {
 
                       context
                           .bloc<PageBloc>()
-                          .add(GoToRegistraionPage(widget.registrationData));
+                          .add(GoToRegistrationPage(widget.registrationData));
                     },
                     child: Icon(Icons.arrow_back),
                   )),

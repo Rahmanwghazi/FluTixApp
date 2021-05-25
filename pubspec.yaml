@@ -39,6 +39,7 @@ dependencies:
   intl: ^0.17.0
   material_design_icons_flutter: ^4.0.5955
   provider: ^4.0.4
+  random_string: ^2.0.1
   universal_html: ^1.2.1
 
 dev_dependencies:

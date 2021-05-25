@@ -94,7 +94,8 @@ class _AccountConfirmationPageState extends State<AccountConfirmationPage> {
                                 isSigningUp = true;
                               });
 
-                              imageFileToUpload = widget.registrationData.profilePicture;
+                              imageFileToUpload =
+                                  widget.registrationData.profilePicture;
 
                               SignInSignUpResult result =
                                   await AuthServices.signUp(
