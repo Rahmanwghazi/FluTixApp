@@ -91,6 +91,7 @@ class MoviePage extends StatelessWidget {
           }),
         ),
 
+        // note: NOW PLAYING
         Container(
           margin: EdgeInsets.fromLTRB(defaultMargin, 30, defaultMargin, 12),
           child: Text(
@@ -134,6 +135,7 @@ class MoviePage extends StatelessWidget {
           ),
         ),
 
+        // note: BROWSE MOVIE
         Container(
           margin: EdgeInsets.fromLTRB(defaultMargin, 30, defaultMargin, 12),
           child: Text(
@@ -164,6 +166,7 @@ class MoviePage extends StatelessWidget {
           },
         ),
 
+        // note: COMING SOON
         Container(
           margin: EdgeInsets.fromLTRB(defaultMargin, 30, defaultMargin, 12),
           child: Text(
@@ -200,6 +203,7 @@ class MoviePage extends StatelessWidget {
           ),
         ),
 
+        // note: GET LUCKY DAY
         Container(
           margin: EdgeInsets.fromLTRB(defaultMargin, 30, defaultMargin, 12),
           child: Text(

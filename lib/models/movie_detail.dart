@@ -9,17 +9,20 @@ class MovieDetail extends Movie {
             id: movie.id,
             title: movie.title,
             voteAverage: movie.voteAverage,
-            overView: movie.overView,
+            overview: movie.overview,
             posterPath: movie.posterPath,
             backdropPath: movie.backdropPath);
 
-String get genresAndLanguage{
-  String s = "";
-  for (var genre in genres){
-    s += genre + (genre!=genres.last ? ', ' : '');
+  String get genresAndLanguage {
+    String s = "";
+
+    for (var genre in genres) {
+      s += genre + (genre != genres.last ? ', ' : '');
+    }
+
+    return "$s - $language";
   }
-  return "$s - $language";
-}
-@override
-List<Object> get props => super.props + [genres, language];
+
+  @override
+  List<Object> get props => super.props + [genres, language];
 }

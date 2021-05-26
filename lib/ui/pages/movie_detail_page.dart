@@ -119,7 +119,7 @@ class MovieDetailPage extends StatelessWidget {
                         // note: RATING
                         RatingStars(
                           voteAverage: movie.voteAverage,
-                          //  color: accentColor3,
+                         // color: accentColor3,
                           //alignment: MainAxisAlignment.center,
                         ),
                         SizedBox(
@@ -181,7 +181,7 @@ class MovieDetailPage extends StatelessWidget {
                           margin: EdgeInsets.fromLTRB(
                               defaultMargin, 0, defaultMargin, 30),
                           child: Text(
-                            movie.overView,
+                            movie.overview,
                             style: greyTextFont.copyWith(
                                 fontWeight: FontWeight.w400),
                           ),

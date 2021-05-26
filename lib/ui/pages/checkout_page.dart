@@ -124,7 +124,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
                                       RatingStars(
                                         voteAverage: widget
                                             .ticket.movieDetail.voteAverage,
-                                //        color: accentColor3,
+                                //       color: accentColor3,
                                       )
                                     ],
                                   )
