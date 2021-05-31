@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutix/bloc/blocs.dart';
 import 'package:flutix/models/models.dart';
 import 'package:flutix/services/services.dart';
@@ -13,8 +15,10 @@ import 'package:intl/intl.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:qr_flutter/qr_flutter.dart';
 import 'package:random_string/random_string.dart';
 import 'package:flutix/extensions/extensions.dart';
+import 'package:path/path.dart';
 
 part 'sign_in_page.dart';
 part 'wrapper.dart';
@@ -29,3 +33,9 @@ part 'select_schedule_page.dart';
 part 'select_seat_page.dart';
 part 'checkout_page.dart';
 part 'success_page.dart';
+part 'ticket_page.dart';
+part 'ticket_detail_page.dart';
+part 'profile_page.dart';
+part 'topup_page.dart';
+part 'wallet_page.dart';
+part 'edit_profile_page.dart';

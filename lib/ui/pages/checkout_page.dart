@@ -393,7 +393,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
                                                     totalPrice: total),
                                                 transaction));
                                       } else {
-                                        // # Uang tidak cukup
+                                        
                                       }
                                     }),
                               )
