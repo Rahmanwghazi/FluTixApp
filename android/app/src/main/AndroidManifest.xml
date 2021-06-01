@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.flutix">
+    <uses-permission android:name="android.permission.INETRNET"/>
    <application
         android:label="flutix"
         android:icon="@mipmap/ic_launcher">
